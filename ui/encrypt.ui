@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EncryptForm</class>
+ <widget class="QWidget" name="EncryptForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>690</width>
+    <height>612</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>工具合集</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_8">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="sizeIncrement">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>16</width>
+       <height>16</height>
+      </size>
+     </property>
+     <widget class="QWidget" name="tab_mda">
+      <attribute name="title">
+       <string>消息摘要</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_1">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_1">
+           <item>
+            <widget class="QLabel" name="label_mda_mod">
+             <property name="text">
+              <string>模块:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="mda_mod_combo">
+             <property name="placeholderText">
+              <string/>
+             </property>
+             <item>
+              <property name="text">
+               <string>MD5</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>SHA1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>SHA224</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>SHA256</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>SHA384</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>SHA512</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>HMAC-MD5</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>HMAC-SHA1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>HMAC-SHA224</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>HMAC-SHA256</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>HMAC-SHA384</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>HMAC-SHA512</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_1">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_mda_salt">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>盐:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="mda_salt"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_mda_format">
+             <property name="text">
+              <string>格式:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="mda_format_combo">
+             <item>
+              <property name="text">
+               <string>hex</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>base64</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPlainTextEdit" name="mda_input"/>
+         </item>
+         <item>
+          <widget class="QTextBrowser" name="mda_output"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_symmetric">
+      <attribute name="title">
+       <string>对称加密</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="label_symmetric_model">
+             <property name="text">
+              <string>模块:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="symmetric_model_combo">
+             <item>
+              <property name="text">
+               <string>AES</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>DES</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>3DES</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>RC4</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_symmetric_mod">
+             <property name="text">
+              <string>模式:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="symmetric_mod_combo">
+             <item>
+              <property name="text">
+               <string>ECB</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>CBC</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>CFB</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>CTR</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>OFB</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_symmetric_fill">
+             <property name="text">
+              <string>填充:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="symmetric_fill_combo">
+             <item>
+              <property name="text">
+               <string>pkcs7</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>x923</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>iso7816</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_symmetric_key_length">
+             <property name="text">
+              <string>密钥长度:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="symmetric_key_length_combo">
+             <item>
+              <property name="text">
+               <string>16</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>24</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>32</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_symmetric_format">
+             <property name="text">
+              <string>格式:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="symmetric_format_combo">
+             <item>
+              <property name="text">
+               <string>hex</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>base64</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_symmetric_key">
+             <property name="text">
+              <string>密钥:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="symmetric_key"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_symmetric_iv">
+             <property name="text">
+              <string>向量:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="symmetric_iv"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="encryption_btn">
+             <property name="text">
+              <string>加密</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="decrypt_btn">
+             <property name="text">
+              <string>解密</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_symmetric_plaintext">
+             <property name="text">
+              <string>明文:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPlainTextEdit" name="symmetric_plaintext">
+             <property name="plainText">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QLabel" name="label_symmetric_ciphertext">
+             <property name="text">
+              <string>密文:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPlainTextEdit" name="symmetric_ciphertext">
+             <property name="plainText">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_asymmetric">
+      <attribute name="title">
+       <string>非对称加密</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <item>
+            <widget class="QLabel" name="label_asymmetric_model">
+             <property name="text">
+              <string>模块:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="asymmetric_model_combo">
+             <item>
+              <property name="text">
+               <string>RSA</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_asymmetric_key_length">
+             <property name="text">
+              <string>密钥长度:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="asymmetric_key_length_combo">
+             <item>
+              <property name="text">
+               <string>1024</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>2048</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>4096</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="asymmetric_generate">
+             <property name="text">
+              <string>生成密钥对</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Expanding</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="asymmetric_encrypt">
+             <property name="text">
+              <string>公钥加密</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="asymmetric_decrypt">
+             <property name="text">
+              <string>私钥解密</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Minimum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QFormLayout" name="formLayout">
+           <item row="0" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_public_key">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>18</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>公钥Public:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPlainTextEdit" name="public_key"/>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <item>
+                <widget class="QLabel" name="label_private_key">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>私钥Private:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPlainTextEdit" name="private_key"/>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <item>
+              <widget class="QLabel" name="label_asymmetric_plaintext">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>18</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>明文:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPlainTextEdit" name="asymmetric_plaintext"/>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <item>
+                <widget class="QLabel" name="label_asymmetric_ciphertext">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>密文:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPlainTextEdit" name="asymmetric_ciphertext"/>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_rail">
+      <attribute name="title">
+       <string>栅栏加密</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_9">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_11">
+           <item>
+            <widget class="QLabel" name="label_fence_num">
+             <property name="text">
+              <string>栏数:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="rail_fence_num"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_space">
+             <property name="text">
+              <string>分隔符:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="rail_space"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="rail_encrypt">
+             <property name="text">
+              <string>加密</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="rail_decrypt">
+             <property name="text">
+              <string>解密</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_10">
+           <item>
+            <widget class="QLabel" name="label_rail_plaintext">
+             <property name="text">
+              <string>明文:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPlainTextEdit" name="rail_plaintext"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="label_rail_ciphertext">
+             <property name="text">
+              <string>密文:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPlainTextEdit" name="rail_ciphertext"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_parse_headers">
+      <attribute name="title">
+       <string>浏览器请求头格式化</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QPlainTextEdit" name="headers_input"/>
+         </item>
+         <item>
+          <widget class="QTextBrowser" name="headers_output"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_msg_queue">
+      <attribute name="title">
+       <string>消息队列</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <item>
+        <widget class="QTabWidget" name="tabWidget_2">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tab_nsq">
+          <attribute name="title">
+           <string>NSQ</string>
+          </attribute>
+          <widget class="QGroupBox" name="groupBox">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>20</y>
+             <width>221</width>
+             <height>171</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>配置</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_13">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_12">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_12">
+                <item>
+                 <widget class="QComboBox" name="nsq_config_combo"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_14">
+                <item>
+                 <widget class="QPlainTextEdit" name="nsq_config_text"/>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="geometry">
+            <rect>
+             <x>320</x>
+             <y>10</y>
+             <width>278</width>
+             <height>257</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>状态</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_15">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_14">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_15">
+                <item>
+                 <widget class="QComboBox" name="comboBox"/>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>查询</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QTextBrowser" name="textBrowser"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab_rabbitmq">
+          <attribute name="title">
+           <string>Rabbitmq</string>
+          </attribute>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
